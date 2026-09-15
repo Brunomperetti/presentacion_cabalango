@@ -14,14 +14,31 @@
   <body>
     <a class="skip-link" href="#slide-1">Ir a la presentación</a>
 
+    <svg class="svg-library" aria-hidden="true">
+      <symbol id="icon-bed" viewBox="0 0 24 24"><path d="M3 19v-8m18 8v-6a2 2 0 0 0-2-2H9a3 3 0 0 0-3 3v2m0-5V8h4a2 2 0 0 1 2 2v1M3 16h18"/></symbol>
+      <symbol id="icon-food" viewBox="0 0 24 24"><path d="M7 3v7m-3-7v4a3 3 0 0 0 6 0V3M7 10v11m10-18v18m0-18c-3 2-4 6-2 9h2"/></symbol>
+      <symbol id="icon-river" viewBox="0 0 24 24"><path d="M3 8c3-2 5 2 8 0s5 2 10 0M3 13c3-2 5 2 8 0s5 2 10 0M3 18c3-2 5 2 8 0s5 2 10 0"/></symbol>
+      <symbol id="icon-shop" viewBox="0 0 24 24"><path d="M4 10v10h16V10M3 10l2-6h14l2 6c-1 2-4 2-5 0-1 2-4 2-5 0-1 2-4 2-5 0-1 2-3 2-3 0Zm6 10v-5h6v5"/></symbol>
+      <symbol id="icon-activity" viewBox="0 0 24 24"><path d="m4 20 5-9 3 4 3-6 5 11M7 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></symbol>
+      <symbol id="icon-craft" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4M12 3c4 3 6 6 6 9s-2 6-6 9c-4-3-6-6-6-9s2-6 6-9Z"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2"/></symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6 3h4l1 5-3 2c2 4 4 6 8 7l2-3 4 2v4c0 2-2 2-3 2C9 21 3 14 3 6c0-2 1-3 3-3Z"/></symbol>
+      <symbol id="icon-map" viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Zm6-3v15m6-12v15"/></symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M20 15a4 4 0 0 1-4 4H9l-5 3 1-5a8 8 0 1 1 15-2Z"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+      <symbol id="icon-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+    </svg>
+
     <main class="presentation" aria-label="Presentación Cabalango" aria-live="polite">
       <section class="slide hero-slide is-active" id="slide-1" aria-labelledby="title-1">
         <div class="slide__ambient" aria-hidden="true"></div>
         <div class="slide__content hero-slide__content">
-          <p class="eyebrow animate-in">Córdoba · Argentina</p>
+          <p class="eyebrow animate-in">Cabalango · Córdoba</p>
           <h1 id="title-1" class="animate-in">CABALANGO</h1>
           <p class="hero-slide__subtitle animate-in">Sistema de captación turística <strong>2026/27</strong></p>
           <p class="hero-slide__services animate-in">App/Web <span>·</span> Publicidad <span>·</span> Datos</p>
+          <p class="hero-slide__manifesto animate-in">Una estrategia para hacer visible el destino, organizar su oferta y transformar interés en visitas.</p>
           <button class="button animate-in" type="button" data-next-slide>Comenzar presentación <span aria-hidden="true">→</span></button>
         </div>
         <p class="source animate-in">Presentación institucional · Cabalango 2026/27</p>
@@ -29,48 +46,97 @@
 
       <section class="slide data-slide" id="slide-2" aria-labelledby="title-2" aria-hidden="true">
         <div class="slide__content slide__content--wide">
-          <div class="slide-heading">
+          <header class="slide-heading">
             <p class="eyebrow animate-in">Una localidad, muchas experiencias</p>
             <h2 id="title-2" class="animate-in">Cabalango tiene mucho para ofrecer</h2>
-            <p class="lead animate-in">El desafío es hacer que más personas lo descubran.</p>
-          </div>
-          <ul class="offer-grid animate-in" aria-label="Oferta turística de Cabalango">
-            <li class="card"><span class="offer-icon" aria-hidden="true">⌂</span><span>Alojamientos</span></li>
-            <li class="card"><span class="offer-icon" aria-hidden="true">◒</span><span>Gastronomía</span></li>
-            <li class="card"><span class="offer-icon" aria-hidden="true">≈</span><span>Río</span></li>
-            <li class="card"><span class="offer-icon" aria-hidden="true">◇</span><span>Comercios</span></li>
-            <li class="card"><span class="offer-icon" aria-hidden="true">↗</span><span>Actividades</span></li>
-            <li class="card"><span class="offer-icon" aria-hidden="true">✦</span><span>Ferias</span></li>
+            <p class="lead animate-in">El desafío es que más personas lo descubran.</p>
+          </header>
+          <ul class="offer-grid" aria-label="Oferta turística de Cabalango">
+            <li class="card animate-in"><svg class="line-icon" aria-hidden="true"><use href="#icon-bed"/></svg><span>Alojamientos</span></li>
+            <li class="card animate-in"><svg class="line-icon" aria-hidden="true"><use href="#icon-food"/></svg><span>Gastronomía</span></li>
+            <li class="card animate-in"><svg class="line-icon" aria-hidden="true"><use href="#icon-river"/></svg><span>Río y balnearios</span></li>
+            <li class="card animate-in"><svg class="line-icon" aria-hidden="true"><use href="#icon-shop"/></svg><span>Comercios y servicios</span></li>
+            <li class="card animate-in"><svg class="line-icon" aria-hidden="true"><use href="#icon-activity"/></svg><span>Actividades</span></li>
+            <li class="card animate-in"><svg class="line-icon" aria-hidden="true"><use href="#icon-craft"/></svg><span>Ferias y artesanos</span></li>
           </ul>
+          <p class="closing-line animate-in">La oferta existe. El desafío es hacerla visible, accesible y fácil de explorar.</p>
         </div>
-        <p class="source animate-in">Base conceptual para el ecosistema turístico local</p>
       </section>
 
-      <section class="slide split-slide demo-slide" id="slide-3" aria-labelledby="title-3" aria-hidden="true">
-        <div class="slide__content slide__content--wide">
-          <div class="slide-heading slide-heading--compact">
-            <p class="eyebrow animate-in">Experiencia digital integrada</p>
+      <section class="slide demo-slide" id="slide-3" aria-labelledby="title-3" aria-hidden="true">
+        <div class="slide__content slide__content--wide solution-layout">
+          <header class="slide-heading solution-heading">
+            <p class="eyebrow animate-in">La solución digital</p>
             <h2 id="title-3" class="animate-in">Una sola puerta de entrada para descubrir Cabalango</h2>
-          </div>
-          <div class="mockup-stage animate-in">
-            <figure class="device device--phone">
+            <p class="lead animate-in">Toda la oferta turística organizada en una misma experiencia digital.</p>
+          </header>
+          <div class="mockup-stage">
+            <figure class="device device--phone animate-in">
               <div class="device__camera" aria-hidden="true"></div>
-              <div class="device__placeholder"><span>Imagen futura</span><strong>App móvil</strong><small>Reemplazar con captura real</small></div>
-              <figcaption>Experiencia en celular</figcaption>
+              <div class="device__placeholder"><span>Captura futura</span><strong>Cabalango</strong><small>Experiencia móvil</small></div>
+              <figcaption>Celular</figcaption>
             </figure>
-            <figure class="device device--laptop">
-              <div class="device__screen"><div class="device__placeholder"><span>Imagen futura</span><strong>Sitio web</strong><small>Reemplazar con captura real</small></div></div>
+            <span class="device-plus animate-in" aria-hidden="true">+</span>
+            <figure class="device device--laptop animate-in">
+              <div class="device__screen"><div class="device__placeholder"><span>Captura futura</span><strong>Descubrí Cabalango</strong><small>Experiencia web</small></div></div>
               <div class="device__base" aria-hidden="true"></div>
-              <figcaption>Experiencia en notebook</figcaption>
+              <figcaption>Notebook</figcaption>
             </figure>
           </div>
+          <ul class="digital-categories animate-in" aria-label="Secciones de la experiencia digital">
+            <li>Dónde dormir</li><li>Dónde comer</li><li>Qué hacer</li><li>Qué comprar</li><li>Eventos</li><li>Mapas</li>
+          </ul>
+          <p class="highlight-phrase animate-in">Todo Cabalango, en una sola experiencia digital.</p>
         </div>
-        <p class="source animate-in">Mockups de referencia · No representan interfaces definitivas</p>
       </section>
 
-      <section class="slide quote-slide" id="slide-4" aria-labelledby="title-4" aria-hidden="true">
+      <section class="slide business-slide" id="slide-4" aria-labelledby="title-4" aria-hidden="true">
+        <div class="slide__content slide__content--wide">
+          <header class="slide-heading business-heading">
+            <p class="eyebrow animate-in">Presencia digital para la oferta local</p>
+            <h2 id="title-4" class="animate-in">Cada emprendimiento tiene su propio espacio</h2>
+          </header>
+          <div class="business-layout">
+            <article class="listing-card animate-in" aria-label="Ejemplo de ficha turística">
+              <div class="listing-card__photo" role="img" aria-label="Espacio reservado para una fotografía"><svg class="line-icon" aria-hidden="true"><use href="#icon-activity"/></svg><span>Foto del emprendimiento</span></div>
+              <div class="listing-card__body">
+                <div><span class="listing-card__type">Ficha turística</span><h3>Ejemplo de ficha</h3><p>Una presentación breve y clara del alojamiento, comercio o servicio.</p></div>
+                <dl class="listing-details"><div><dt><svg class="mini-icon" aria-hidden="true"><use href="#icon-list"/></svg>Servicios</dt><dd>Información destacada</dd></div><div><dt><svg class="mini-icon" aria-hidden="true"><use href="#icon-clock"/></svg>Horarios</dt><dd>Días y horarios</dd></div><div><dt><svg class="mini-icon" aria-hidden="true"><use href="#icon-pin"/></svg>Ubicación</dt><dd>Cabalango, Córdoba</dd></div></dl>
+                <div class="listing-actions" aria-label="Acciones disponibles"><button type="button"><svg class="mini-icon" aria-hidden="true"><use href="#icon-chat"/></svg>WhatsApp</button><button type="button"><svg class="mini-icon" aria-hidden="true"><use href="#icon-map"/></svg>Mapa</button><button type="button"><svg class="mini-icon" aria-hidden="true"><use href="#icon-phone"/></svg>Teléfono</button></div>
+              </div>
+            </article>
+            <div class="business-result animate-in">
+              <div class="mini-flow" aria-label="Recorrido desde el descubrimiento hasta el contacto"><span>Turista descubre</span><b aria-hidden="true">→</b><span>abre la ficha</span><b aria-hidden="true">→</b><span>consulta</span><b aria-hidden="true">→</b><span>visita / contacta</span></div>
+              <p class="highlight-phrase">Del interés al contacto en pocos pasos.</p>
+              <p class="business-types">Alojamientos · Gastronomía · Comercios · Artesanos · Actividades · Servicios</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide journey-slide" id="slide-5" aria-labelledby="title-5" aria-hidden="true">
+        <div class="slide__content slide__content--wide journey-content">
+          <header class="slide-heading">
+            <p class="eyebrow animate-in">Experiencia del turista</p>
+            <h2 id="title-5" class="animate-in">Simple para quien nunca estuvo en Cabalango</h2>
+          </header>
+          <ol class="journey-flow" aria-label="Flujo de navegación">
+            <li class="journey-step animate-in"><span>01</span><svg class="line-icon" aria-hidden="true"><use href="#icon-search"/></svg><strong>Inicio</strong><small>Descubre el destino</small></li>
+            <li class="journey-arrow animate-in" aria-hidden="true">→</li>
+            <li class="journey-step animate-in"><span>02</span><svg class="line-icon" aria-hidden="true"><use href="#icon-list"/></svg><strong>Categoría</strong><small>Elige qué explorar</small></li>
+            <li class="journey-arrow animate-in" aria-hidden="true">→</li>
+            <li class="journey-step animate-in"><span>03</span><svg class="line-icon" aria-hidden="true"><use href="#icon-shop"/></svg><strong>Ficha</strong><small>Encuentra la información</small></li>
+            <li class="journey-arrow animate-in" aria-hidden="true">→</li>
+            <li class="journey-step journey-step--action animate-in"><span>04</span><svg class="line-icon" aria-hidden="true"><use href="#icon-map"/></svg><strong>Mapa / WhatsApp</strong><small>Realiza una acción</small></li>
+          </ol>
+          <p class="journey-copy animate-in">En segundos, una persona puede entender qué ofrece Cabalango y pasar de descubrir el destino a una acción concreta.</p>
+        </div>
+      </section>
+
+      <section class="slide quote-slide" id="slide-6" aria-labelledby="title-6" aria-hidden="true">
         <div class="slide__content quote-slide__content">
-          <p id="title-4" class="transition-copy animate-in">Todo esto está muy bien…<br><strong>pero ¿cómo hacemos para que la gente llegue?</strong></p>
+          <p class="transition-intro animate-in">Todo esto está muy bien…</p>
+          <h2 id="title-6" class="transition-question animate-in">¿pero cómo hacemos para que la gente llegue?</h2>
           <p class="transition-answer animate-in animate-in--delayed">Ahí comienza la estrategia de captación.</p>
         </div>
       </section>
@@ -78,7 +144,7 @@
 
     <nav class="presentation-controls" aria-label="Controles de la presentación">
       <button class="control-button" type="button" data-previous-slide aria-label="Diapositiva anterior">←</button>
-      <p class="slide-counter" aria-label="Número de diapositiva"><span data-current-slide>01</span> <span aria-hidden="true">/</span> <span data-total-slides>04</span></p>
+      <p class="slide-counter" aria-label="Número de diapositiva"><span data-current-slide>01</span> <span aria-hidden="true">/</span> <span data-total-slides>06</span></p>
       <button class="control-button" type="button" data-next-slide aria-label="Diapositiva siguiente">→</button>
       <button class="control-button control-button--fullscreen" type="button" data-fullscreen aria-label="Activar pantalla completa" title="Pantalla completa (F)">⛶</button>
     </nav>
