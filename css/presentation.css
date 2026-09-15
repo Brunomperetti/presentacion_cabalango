@@ -1,0 +1,56 @@
+.presentation { position: relative; width: 100vw; height: 100vh; height: 100dvh; overflow: hidden; }
+.slide { position: absolute; inset: 0; display: grid; width: 100vw; height: 100vh; height: 100dvh; overflow: hidden; background: var(--cream); opacity: 0; visibility: hidden; transform: translateX(2%); transition: opacity var(--transition-fast) ease, transform var(--transition-standard) var(--ease-out), visibility 0s var(--transition-standard); }
+.slide.is-active { z-index: 1; opacity: 1; visibility: visible; transform: translateX(0); transition-delay: 0s; }
+.slide.is-before { transform: translateX(-2%); }
+.slide__content { position: relative; z-index: 1; align-self: center; width: min(100% - (2 * var(--page-padding)), 92rem); margin-inline: auto; }
+.slide__content--wide { height: min(76vh, 52rem); display: flex; flex-direction: column; justify-content: center; }
+.source { position: absolute; z-index: 2; bottom: max(2.2rem, env(safe-area-inset-bottom)); left: var(--page-padding); margin: 0; color: var(--muted); font-size: clamp(.62rem, .8vw, .75rem); letter-spacing: .02em; }
+.hero-slide { color: var(--white); background: var(--forest); }
+.slide__ambient { position: absolute; inset: 0; background: radial-gradient(circle at 80% 15%, rgb(38 123 140 / 45%), transparent 30%), radial-gradient(circle at 70% 115%, rgb(168 107 66 / 45%), transparent 36%), linear-gradient(120deg, transparent 55%, rgb(255 255 255 / 4%) 55%); }
+.hero-slide__content { display: flex; flex-direction: column; align-items: flex-start; }
+.hero-slide .eyebrow, .hero-slide .source { color: rgb(255 255 255 / 70%); }
+.hero-slide h1 { margin: 0; font-size: clamp(4rem, 13vw, 12rem); font-weight: 700; letter-spacing: -.075em; }
+.hero-slide__subtitle { margin: .5rem 0 .75rem; font-size: clamp(1.35rem, 2.5vw, 2.5rem); }
+.hero-slide__services { margin-bottom: 2.5rem; color: rgb(255 255 255 / 72%); font-size: clamp(.9rem, 1.3vw, 1.1rem); letter-spacing: .04em; }
+.hero-slide__services span { padding: 0 .5rem; color: var(--river); }
+.hero-slide .button { background: var(--white); color: var(--forest); }
+.offer-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+.offer-grid .card { display: flex; min-height: 9rem; flex-direction: column; justify-content: space-between; padding: 1.25rem; color: var(--forest); font-weight: 700; }
+.offer-icon { color: var(--river); font-size: 2rem; font-weight: 400; }
+.slide-heading--compact h2 { max-width: 20ch; font-size: clamp(2rem, 4.1vw, 4.5rem); }
+.mockup-stage { display: flex; align-items: flex-end; justify-content: center; gap: clamp(2rem, 6vw, 7rem); min-height: 0; }
+.device { margin: 0; color: var(--muted); text-align: center; }
+.device figcaption { margin-top: .7rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .11em; }
+.device--phone { width: clamp(9rem, 15vw, 13rem); border: .45rem solid var(--navy); border-radius: 1.6rem; padding: .4rem; background: var(--navy); box-shadow: var(--shadow); }
+.device__camera { width: 35%; height: .35rem; margin: 0 auto .35rem; border-radius: 1rem; background: rgb(255 255 255 / 30%); }
+.device--phone .device__placeholder { aspect-ratio: 9 / 17; border-radius: .9rem; }
+.device--phone figcaption { color: var(--cream); }
+.device--laptop { width: min(55vw, 40rem); }
+.device__screen { border: .55rem solid var(--navy); border-radius: .8rem .8rem .25rem .25rem; padding: .25rem; background: var(--navy); box-shadow: var(--shadow); }
+.device--laptop .device__placeholder { aspect-ratio: 16 / 9; }
+.device__base { width: 110%; height: .8rem; margin-left: -5%; border-radius: 0 0 50% 50%; background: #d6d6d1; }
+.device__placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px dashed rgb(38 123 140 / 45%); background: linear-gradient(135deg, #eef2ed, #dce7e7); color: var(--navy); }
+.device__placeholder span { margin-bottom: .5rem; color: var(--river); font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.device__placeholder strong { font-size: clamp(1rem, 2vw, 1.7rem); }
+.device__placeholder small { margin-top: .35rem; color: var(--muted); font-size: .65rem; }
+.quote-slide { background: var(--white); }
+.quote-slide__content { text-align: center; }
+.transition-copy { margin-bottom: 2rem; font-size: clamp(2.4rem, 5.5vw, 6rem); line-height: 1.08; letter-spacing: -.05em; }
+.transition-copy strong { color: var(--forest); }
+.transition-answer { margin: 0; color: var(--river); font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 700; }
+.presentation-controls { position: fixed; z-index: 10; right: var(--page-padding); bottom: max(1.5rem, env(safe-area-inset-bottom)); display: flex; align-items: center; gap: .5rem; }
+.control-button { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border: 1px solid rgb(108 115 111 / 24%); border-radius: 50%; background: rgb(255 255 255 / 88%); color: var(--text); cursor: pointer; backdrop-filter: blur(8px); }
+.control-button:disabled { cursor: not-allowed; opacity: .35; }
+.control-button--fullscreen { margin-left: .4rem; }
+.slide-counter { min-width: 4rem; margin: 0; color: var(--muted); font-size: .72rem; text-align: center; letter-spacing: .08em; }
+.progress { position: fixed; z-index: 11; right: 0; bottom: 0; left: 0; height: 3px; background: rgb(108 115 111 / 12%); }
+.progress__bar { display: block; width: 25%; height: 100%; background: var(--river); transform-origin: left; transition: width var(--transition-fast) var(--ease-out); }
+.animate-in { opacity: 0; transform: translateY(1rem); }
+.is-active .animate-in { opacity: 1; transform: translateY(0); transition: opacity var(--transition-standard) var(--ease-out), transform var(--transition-standard) var(--ease-out); }
+.is-active .animate-in:nth-child(2) { transition-delay: 100ms; }
+.is-active .animate-in:nth-child(3) { transition-delay: 180ms; }
+.is-active .animate-in:nth-child(4) { transition-delay: 260ms; }
+.is-active .animate-in:nth-child(5) { transition-delay: 340ms; }
+.is-active .animate-in--delayed { transition-delay: 700ms; }
+/* Ready-to-use slide layout hooks for the next stage. */
+.map-slide, .timeline-slide, .funnel-slide, .closing-slide { background: var(--cream); }

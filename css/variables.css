@@ -1,0 +1,17 @@
+:root {
+  --cream: #f5f1e8;
+  --white: #ffffff;
+  --forest: #314936;
+  --river: #267b8c;
+  --navy: #123a59;
+  --earth: #a86b42;
+  --text: #20252a;
+  --muted: #6c736f;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --page-padding: clamp(1.5rem, 5vw, 6rem);
+  --transition-fast: 400ms;
+  --transition-standard: 600ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --radius: 1.25rem;
+  --shadow: 0 1.5rem 4rem rgb(18 58 89 / 12%);
+}
