@@ -11,6 +11,11 @@
   let currentIndex = 0;
   let touchStart = null;
 
+  // Activate the photographic cover only when the future asset is available.
+  const heroImage = new Image();
+  heroImage.addEventListener('load', () => document.querySelector('.hero-slide')?.classList.add('has-hero-image'));
+  heroImage.src = 'assets/images/hero-cabalango.jpg';
+
   const pad = (number) => String(number).padStart(2, '0');
 
   function indexFromHash() {
