@@ -11,6 +11,46 @@
   let currentIndex = 0;
   let touchStart = null;
 
+  async function configureAppLinks() {
+    try {
+      const response = await fetch('data/config.json');
+      if (!response.ok) throw new Error(`No se pudo cargar la configuración (${response.status})`);
+      const config = await response.json();
+      document.querySelectorAll('[data-app-link]').forEach((link) => {
+        link.href = config.app_url_tracked || config.app_url;
+        link.addEventListener('click', () => window.CabalangoTracking?.trackAppOpen?.('presentacion'));
+      });
+    } catch (error) {
+      console.error('[Cabalango] Error al configurar enlaces:', error);
+    }
+  }
+
+  function loadLocalImages() {
+    document.querySelectorAll('[data-image]').forEach((container) => {
+      const candidates = [container.dataset.image, container.dataset.imageFallback].filter(Boolean);
+
+      const tryCandidate = (index) => {
+        if (index >= candidates.length) {
+          container.classList.add('is-missing');
+          return;
+        }
+
+        const image = new Image();
+        image.addEventListener('load', () => {
+          container.style.backgroundImage = `url('${candidates[index]}')`;
+          container.classList.remove('is-missing');
+          container.closest('.device, .listing, .app-step, .stage-flow li')?.classList.add('has-real-image');
+          container.closest('.devices')?.classList.add('has-real-image');
+          container.dispatchEvent(new CustomEvent('cabalango:imageavailable', { bubbles: true }));
+        });
+        image.addEventListener('error', () => tryCandidate(index + 1));
+        image.src = candidates[index];
+      };
+
+      tryCandidate(0);
+    });
+  }
+
   // Activate the photographic cover only when the future asset is available.
   const heroImage = new Image();
   heroImage.addEventListener('load', () => document.querySelector('.hero-slide')?.classList.add('has-hero-image'));
@@ -51,6 +91,7 @@
     document.title = `Cabalango · ${currentIndex + 1}/${slides.length}`;
     window.CabalangoAnimations?.play(slides[currentIndex]);
     window.CabalangoTracking?.trackSlideView(slides[currentIndex].id);
+    document.dispatchEvent(new CustomEvent('cabalango:slidechange', { detail: { slide: slides[currentIndex], index: currentIndex } }));
   }
 
   const next = () => showSlide(currentIndex + 1);
@@ -108,5 +149,7 @@
   });
   window.addEventListener('hashchange', () => showSlide(indexFromHash(), { replaceHistory: true }));
 
+  configureAppLinks();
+  loadLocalImages();
   showSlide(indexFromHash(), { replaceHistory: true });
 })();
