@@ -304,9 +304,10 @@
     gap: .8rem;
   }
 
-  #slide-10 .argentina svg {
+  #slide-10 .argentina img {
     width: 4.2rem;
     height: 12rem;
+    object-fit: contain;
   }
 
   #slide-10 .argentina span {
@@ -338,5 +339,142 @@
 
   #slide-11 .strategy {
     padding: .5rem .65rem;
+  }
+}
+
+/* Final projector polish: keep editorial content out of the shared source,
+   methodology and navigation safe area on the five data-heavy slides. */
+@media (min-width: 601px) {
+  #slide-9 .slide__content,
+  #slide-10 .slide__content,
+  #slide-11 .slide__content,
+  #slide-14 .slide__content,
+  #slide-15 .slide__content {
+    height: calc(100dvh - 5rem);
+    max-height: none;
+    padding-bottom: 5.25rem;
+  }
+
+  #slide-9 .source-note,
+  #slide-10 .source-note,
+  #slide-11 .source-note,
+  #slide-14 .source-note,
+  #slide-15 .source-note {
+    bottom: .15rem;
+  }
+
+  #slide-10 .method-note,
+  #slide-11 .method-note,
+  #slide-15 .method-note {
+    bottom: 1.6rem;
+    max-width: min(76ch, 58vw);
+    font-size: clamp(.5rem, .58vw, .61rem);
+  }
+
+  #slide-9 .timeline {
+    margin-bottom: clamp(1.3rem, 3vh, 2rem);
+  }
+
+  #slide-9 .statement {
+    max-width: 45rem;
+    margin: 0 auto;
+  }
+
+  #slide-10 .argentina img {
+    flex: 0 0 auto;
+    width: min(11vw, 8.5rem);
+    height: min(43vh, 23rem);
+    object-fit: contain;
+  }
+
+  #slide-10 .signals ul {
+    margin-bottom: clamp(1rem, 2.3vh, 1.45rem);
+  }
+
+  #slide-10 .signals blockquote {
+    margin-top: 0;
+  }
+
+  #slide-11 .strategy {
+    margin-top: .25rem;
+  }
+
+  #slide-14 .regional-callout {
+    max-width: 68ch;
+    margin-top: clamp(.65rem, 1.7vh, 1rem);
+  }
+
+  #slide-14 .regional-occupancy {
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+
+  #slide-15 .impact-conclusion {
+    margin-top: clamp(.75rem, 2vh, 1.25rem);
+  }
+}
+
+@media (min-width: 901px) and (max-height: 800px) {
+  #slide-9 .slide-heading h2,
+  #slide-10 .slide-heading h2 {
+    margin-bottom: .45rem;
+  }
+
+  #slide-9 .timeline {
+    margin: 1.1rem 0 1.35rem;
+  }
+
+  #slide-9 .timeline li {
+    padding-top: 1rem;
+  }
+
+  #slide-10 .country-layout {
+    grid-template-columns: minmax(17rem, 1.05fr) minmax(13rem, .75fr) minmax(18rem, 1fr);
+    gap: 1.5rem;
+  }
+
+  #slide-10 .argentina img {
+    height: min(39vh, 19rem);
+  }
+
+  #slide-10 .signals ul {
+    margin: .55rem 0 .8rem;
+  }
+
+  #slide-10 .signals li {
+    padding: .34rem 0;
+  }
+
+  #slide-11 .international-grid {
+    gap: .55rem 2.5rem;
+  }
+
+  #slide-11 .air-metric > strong {
+    margin-bottom: .8rem;
+  }
+
+  #slide-11 .air-metric > p {
+    margin-bottom: .8rem;
+  }
+
+  #slide-11 .strategy {
+    padding: .65rem 1rem;
+  }
+
+  #slide-14 .regional-route {
+    margin: .55rem auto;
+  }
+
+  #slide-14 .regional-callout {
+    margin-top: .55rem;
+  }
+
+  #slide-15 .impact-layout {
+    margin: .75rem 0 .5rem;
+  }
+
+  #slide-15 .impact-conclusion {
+    margin-top: .55rem;
+    padding-top: .75rem;
   }
 }
