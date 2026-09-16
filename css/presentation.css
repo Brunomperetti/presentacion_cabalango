@@ -526,3 +526,55 @@
     padding-top: .75rem;
   }
 }
+
+/* Guiding questions and provider-focused App story. */
+.guide-question {
+  margin: -.25rem 0 .45rem;
+  color: var(--app-olive);
+  font-family: var(--font-editorial);
+  font-size: clamp(.82rem, 1.15vw, 1.05rem);
+  line-height: 1.25;
+}
+.provider-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(.8rem, 2vw, 1.5rem);
+  margin: clamp(1.2rem, 4vh, 2.5rem) 0;
+  padding: 0;
+  list-style: none;
+}
+.provider-benefits li {
+  min-height: 13rem;
+  border-top: 3px solid var(--app-river);
+  padding: 1.2rem;
+  background: rgb(255 255 255 / 58%);
+}
+.provider-benefits li:nth-child(2) { border-color: var(--app-terracotta); }
+.provider-benefits li:nth-child(3) { border-color: var(--app-olive); }
+.provider-benefits span { color: var(--app-terracotta); font-size: .62rem; font-weight: 700; letter-spacing: .1em; }
+.provider-benefits h3 { margin: 2.2rem 0 .75rem; color: var(--app-brown); font-family: var(--font-editorial); font-size: clamp(1.15rem, 1.7vw, 1.55rem); font-weight: 400; }
+.provider-benefits p { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.55; }
+.provider-benefits .provider-actions { margin: -.2rem 0 .65rem; color: var(--app-olive); font-size: .68rem; font-weight: 700; }
+.provider-closing { margin: 0 auto; color: var(--app-brown); font-family: var(--font-editorial); font-size: clamp(1.05rem, 1.6vw, 1.4rem); text-align: center; }
+.platform-label { display: inline-flex; align-items: center; gap: .45rem; min-width: 0; }
+.platform-label img { width: auto; max-width: 2rem; height: 1.25rem; object-fit: contain; flex: 0 0 auto; }
+
+@media (min-width: 901px) and (max-height: 800px) {
+  .guide-question { margin-bottom: .3rem; }
+  .provider-benefits { margin: .9rem 0; }
+  .provider-benefits li { min-height: 10.5rem; padding: .9rem; }
+  .provider-benefits h3 { margin: 1.45rem 0 .55rem; }
+}
+
+@media (max-width: 600px) {
+  .guide-question { margin: -.1rem 0 .3rem; font-size: .72rem; }
+  .provider-slide h2 { font-size: 1.7rem; }
+  .provider-benefits { grid-template-columns: 1fr; gap: .3rem; margin: .65rem 0; }
+  .provider-benefits li { min-height: 0; padding: .55rem .7rem; }
+  .provider-benefits h3 { margin: .3rem 0 .25rem; font-size: .9rem; }
+  .provider-benefits p { font-size: .58rem; line-height: 1.35; }
+  .provider-benefits .provider-actions { margin: 0 0 .2rem; font-size: .54rem; }
+  .provider-closing { font-size: .78rem; }
+  .platform-label { gap: .3rem; }
+  .platform-label img { max-width: 1.5rem; height: .9rem; }
+}
