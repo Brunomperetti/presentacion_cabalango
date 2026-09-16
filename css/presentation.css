@@ -167,3 +167,176 @@
 .learning-slide h2{max-width:18ch}.learning-body{display:grid;grid-template-columns:1.25fr .8fr;align-items:center;gap:5vw}.learning-loop{position:relative;width:min(43vw,31rem);height:min(43vh,20.5rem);margin:auto}.learning-loop::before{content:"";position:absolute;inset:12%;border:1px solid rgb(95 148 163 / 45%);border-radius:50%}.loop-center{position:absolute;top:50%;left:50%;display:grid;width:7.5rem;height:7.5rem;place-items:center;border-radius:50%;background:var(--app-olive);color:#fff;font-family:var(--font-editorial);transform:translate(-50%,-50%)}.loop-node,.loop-arrow{position:absolute;transform:translate(-50%,-50%)}.loop-node{border:1px solid var(--line);border-radius:999px;padding:.55rem .75rem;background:var(--app-cream);color:var(--app-brown);font-size:.62rem;font-weight:700;white-space:nowrap}.loop-arrow{color:var(--app-terracotta);font-size:1.1rem}.node-1{top:2%;left:50%}.node-2{top:30%;left:91%}.node-3{top:79%;left:79%}.node-4{top:88%;left:25%}.node-5{top:30%;left:7%}.arrow-1{top:14%;left:75%;transform:rotate(40deg)}.arrow-2{top:57%;left:91%;transform:rotate(85deg)}.arrow-3{top:88%;left:54%;transform:rotate(165deg)}.arrow-4{top:59%;left:8%;transform:rotate(240deg)}.arrow-5{top:12%;left:24%}.learning-copy{border-left:1px solid var(--line);padding-left:2rem}.learning-copy ul{margin:1rem 0 1.4rem;padding:0;list-style:none}.learning-copy li{border-bottom:1px solid var(--line);padding:.65rem 0;color:var(--app-brown);font-family:var(--font-editorial)}.learning-copy>p:last-child{color:var(--muted);font-size:.78rem;line-height:1.5}.learning-hero{max-width:72ch;margin:.65rem auto 0;color:var(--app-brown);font-family:var(--font-editorial);font-size:clamp(1.05rem,1.6vw,1.45rem);text-align:center}
 .demo-layout{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:6vw}.demo-slide h2{font-size:clamp(2.8rem,5vw,5rem)}.demo-body{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:clamp(2rem,5vw,5rem)}.qr-block{text-align:center}.qr-placeholder{position:relative;display:grid;width:min(35vh,18rem);aspect-ratio:1;place-items:center;border:.7rem solid #fff;background:repeating-linear-gradient(45deg,#fff 0 12px,#eee9df 12px 24px);box-shadow:var(--shadow);overflow:hidden}.qr-placeholder img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}.qr-placeholder.is-placeholder img{display:none}.qr-placeholder>span{color:var(--app-brown);font-size:3rem;font-weight:700}.qr-placeholder small{font-size:.45rem;font-weight:400}.qr-block>strong{display:block;margin-top:.8rem;color:var(--app-brown);font-family:var(--font-editorial);font-size:1rem}.demo-copy ul{display:flex;max-width:27rem;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0;padding:0;list-style:none}.demo-copy li{border:1px solid var(--line);border-radius:999px;padding:.45rem .7rem;font-size:.65rem}.demo-copy p{max-width:46ch;color:var(--muted);font-size:.65rem;line-height:1.5}
 .closing-slide{background:var(--app-brown);color:#fff}.closing-slide::after{border-color:rgb(255 255 255 / 12%)}.closing-background{position:absolute;inset:0;background:radial-gradient(circle at 75% 20%,rgb(95 148 163 / 45%),transparent 30%),linear-gradient(135deg,var(--app-olive),var(--app-brown));background-position:center;background-size:cover}.closing-background::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgb(41 40 35 / 83%),rgb(41 40 35 / 32%))}.closing-content{text-align:center}.closing-content h2{max-width:22ch;margin:auto;font-family:var(--font-editorial);font-size:clamp(2rem,4vw,4rem);font-weight:400;line-height:1.05}.closing-content h2 strong{color:#d8e0cb;font-weight:400}.closing-content p{margin:2.5rem 0 0;color:rgb(255 255 255 / 68%);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+
+/* Focused layout refinements for the national and international market slides. */
+#slide-10 .slide__content,
+#slide-11 .slide__content {
+  padding-bottom: 5.2rem;
+}
+
+#slide-10 .country-layout {
+  grid-template-columns: minmax(18rem, 1.05fr) minmax(15rem, .82fr) minmax(18rem, 1fr);
+  gap: clamp(1.5rem, 3vw, 3.75rem);
+}
+
+#slide-10 .argentina {
+  min-width: 0;
+  justify-content: center;
+}
+
+#slide-10 .argentina svg {
+  flex: 0 0 auto;
+  width: min(10vw, 7.5rem);
+  height: min(45vh, 24rem);
+}
+
+#slide-10 .argentina-island {
+  fill: rgb(110 121 80 / 18%);
+  stroke: var(--app-olive);
+  stroke-width: 2;
+}
+
+#slide-10 .signals {
+  min-width: 0;
+}
+
+#slide-10 .signals ul {
+  margin: .8rem 0 1.15rem;
+}
+
+#slide-10 .signals li {
+  gap: 1.5rem;
+  padding: .48rem 0;
+}
+
+#slide-10 .signals blockquote {
+  border-left: 2px solid var(--app-terracotta);
+  padding-left: 1rem;
+  font-size: clamp(1rem, 1.45vw, 1.35rem);
+}
+
+#slide-10 .signals blockquote strong,
+#slide-10 .signals blockquote span {
+  display: block;
+}
+
+#slide-10 .signals blockquote span {
+  margin-top: .35rem;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: .72rem;
+  line-height: 1.45;
+}
+
+#slide-11 .international-grid {
+  grid-template-columns: minmax(19rem, 1fr) minmax(28rem, 1.3fr);
+  gap: 1.2rem clamp(2.5rem, 4vw, 4.5rem);
+}
+
+#slide-11 .air-metric {
+  min-width: 0;
+  padding: .35rem 0 .5rem;
+}
+
+#slide-11 .air-metric > strong {
+  margin-bottom: .8rem;
+  font-size: clamp(3.75rem, 6.4vw, 6.5rem);
+  line-height: .88;
+  letter-spacing: -.055em;
+  white-space: nowrap;
+}
+
+#slide-11 .air-metric > p {
+  margin-bottom: 1rem;
+  line-height: 1.55;
+}
+
+#slide-11 .air-metric > b {
+  display: flex;
+  align-items: baseline;
+  gap: .45rem;
+}
+
+#slide-11 .strategy {
+  align-items: center;
+  padding: .8rem 1.2rem;
+}
+
+@media (min-width: 901px) and (max-height: 800px) {
+  #slide-10 .slide__content,
+  #slide-11 .slide__content {
+    padding-bottom: 4.6rem;
+  }
+
+  #slide-10 .country-layout {
+    gap: 2vw;
+  }
+
+  #slide-11 .international-grid {
+    gap: .75rem 2.5rem;
+  }
+
+  #slide-11 .air-metric > strong {
+    margin-bottom: .55rem;
+  }
+}
+
+@media (max-width: 900px) {
+  #slide-10 .country-layout {
+    grid-template-columns: 1fr .7fr 1fr;
+    gap: 1.25rem;
+  }
+
+  #slide-11 .international-grid {
+    grid-template-columns: minmax(15rem, 1fr) minmax(20rem, 1.25fr);
+    gap: 1rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #slide-10 .slide__content,
+  #slide-11 .slide__content {
+    padding-bottom: 3.8rem;
+  }
+
+  #slide-10 .country-layout {
+    grid-template-columns: minmax(7rem, .72fr) minmax(10rem, 1fr);
+    gap: .8rem;
+  }
+
+  #slide-10 .argentina svg {
+    width: 4.2rem;
+    height: 12rem;
+  }
+
+  #slide-10 .argentina span {
+    max-width: 12ch;
+  }
+
+  #slide-10 .signals li {
+    padding: .3rem 0;
+  }
+
+  #slide-10 .signals blockquote {
+    padding-left: .6rem;
+    font-size: .75rem;
+  }
+
+  #slide-10 .signals blockquote span {
+    font-size: .52rem;
+  }
+
+  #slide-11 .international-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: .6rem .9rem;
+  }
+
+  #slide-11 .air-metric > strong {
+    margin-bottom: .5rem;
+    font-size: 2.5rem;
+  }
+
+  #slide-11 .strategy {
+    padding: .5rem .65rem;
+  }
+}
