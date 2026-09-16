@@ -25,6 +25,14 @@
     }
   }
 
+  function configureExternalLinkTracking() {
+    document.querySelectorAll('[data-track-external]').forEach((link) => {
+      link.addEventListener('click', () => {
+        window.CabalangoTracking?.trackExternalLink?.(link.dataset.trackExternal);
+      });
+    });
+  }
+
   function loadLocalImages() {
     document.querySelectorAll('[data-image]').forEach((container) => {
       const candidates = [container.dataset.image, container.dataset.imageFallback].filter(Boolean);
@@ -160,6 +168,7 @@
   window.addEventListener('hashchange', () => showSlide(indexFromHash(), { replaceHistory: true }));
 
   configureAppLinks();
+  configureExternalLinkTracking();
   configureQrFallback();
   loadLocalImages();
   showSlide(indexFromHash(), { replaceHistory: true });

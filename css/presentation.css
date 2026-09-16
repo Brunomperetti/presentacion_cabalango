@@ -53,6 +53,54 @@
   left: min(34rem, 42vw);
 }
 
+/* Discreet links to real campaign benchmarks. */
+.benchmark-card {
+  padding-bottom: 4.5rem !important;
+}
+
+.benchmark-link {
+  position: absolute;
+  right: 1.1rem;
+  bottom: 0.9rem;
+  left: 1.1rem;
+}
+
+.benchmark-link a {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.38rem 0.55rem;
+  color: var(--app-brown);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.benchmark-link a:hover {
+  border-color: var(--app-terracotta);
+}
+
+.benchmark-link small {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.48rem;
+  line-height: 1.25;
+}
+
+.benchmark-link--intent {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.55rem;
+}
+
+.benchmark-link--intent small {
+  margin-top: 0;
+}
+
 /* The presentation is delivered from a notebook/projector: prioritize these
    compact landscape viewports before applying the mobile composition. */
 @media (min-width: 901px) and (max-height: 800px) {
