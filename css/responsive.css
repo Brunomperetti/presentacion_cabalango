@@ -22,3 +22,23 @@
   .slide__content{max-height:calc(100dvh - 4.5rem)}h2{font-size:clamp(2rem,3.6vw,3.8rem)}.offer-grid li{min-height:5rem}.stage-flow{margin:1rem 0}.stage-flow li{min-height:10rem}.stage-flow h3{margin-top:1.5rem}.listing>.app-screenshot{min-height:14rem}.demand-card{min-height:11rem;padding:1rem}.timeline{margin:1.5rem 0 1rem}.capture-flow{margin:1rem 0}.capture-flow>li{min-height:10rem}.capture-flow h3{margin-top:2rem}.international-grid{gap:.6rem 2rem}.strategy{padding:.7rem 1rem}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* Keep the compact mobile flow readable when optional stage previews exist. */
+@media (max-width: 600px) {
+  .stage-preview {
+    display: none;
+  }
+
+  .method-note {
+    bottom: 2.8rem;
+  }
+
+  .sources .source-note {
+    max-width: 40%;
+  }
+
+  .sources .source-note:nth-child(2) {
+    right: 4.5rem;
+    left: auto;
+  }
+}

@@ -27,12 +27,27 @@
 
   function loadLocalImages() {
     document.querySelectorAll('[data-image]').forEach((container) => {
-      const image = new Image();
-      image.addEventListener('load', () => {
-        container.style.backgroundImage = `url('${container.dataset.image}')`;
-        container.classList.add('has-image');
-      });
-      image.src = container.dataset.image;
+      const candidates = [container.dataset.image, container.dataset.imageFallback].filter(Boolean);
+
+      const tryCandidate = (index) => {
+        if (index >= candidates.length) {
+          container.classList.add('is-missing');
+          return;
+        }
+
+        const image = new Image();
+        image.addEventListener('load', () => {
+          container.style.backgroundImage = `url('${candidates[index]}')`;
+          container.classList.remove('is-missing');
+          container.closest('.device, .listing, .app-step, .stage-flow li')?.classList.add('has-real-image');
+          container.closest('.devices')?.classList.add('has-real-image');
+          container.dispatchEvent(new CustomEvent('cabalango:imageavailable', { bubbles: true }));
+        });
+        image.addEventListener('error', () => tryCandidate(index + 1));
+        image.src = candidates[index];
+      };
+
+      tryCandidate(0);
     });
   }
 
