@@ -7,5 +7,24 @@
   "realizo_compras": 52,
   "actividades_promedio": 2.5,
   "turistas_no_residentes_aereos": 29368,
-  "crecimiento_turismo_internacional": 54.6
+  "crecimiento_turismo_internacional": 54.6,
+  "oit_nacional": {
+    "buenos_aires": 26.2,
+    "cordoba": 23.5,
+    "mendoza": 4.6,
+    "santa_fe": 4.2,
+    "tucuman": 4.0
+  },
+  "procedencia_internacional": {
+    "europa": 36,
+    "limitrofes": 29,
+    "america_norte": 14
+  },
+  "oit_internacional": {
+    "brasil": 15.7,
+    "chile": 9.5,
+    "alemania": 8.1,
+    "espana": 8.0,
+    "francia": 6.3
+  }
 }
