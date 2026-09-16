@@ -61,6 +61,12 @@ Mantener este archivo como fuente única y no copiar valores en HTML o JavaScrip
 
 Usar rutas relativas (por ejemplo, `assets/images/rio.webp`) para funcionar dentro del subdirectorio de GitHub Pages. Indicar siempre `alt`, dimensiones `width`/`height` para evitar saltos de layout y `loading="lazy"` para recursos fuera de la primera slide.
 
+### QR y fotografía de cierre
+
+- La diapositiva 18 intenta cargar `assets/qr/cabalango-presentacion.png`. Ese archivo debe ser un QR generado a partir de `app_url_tracked` en `data/config.json`; si no existe, se muestra un placeholder identificado y el botón **ABRIR APP / WEB** continúa funcionando con la URL configurada.
+- Cuando cambie `app_url_tracked`, regenerar el PNG con cualquier generador QR confiable, conservar ese nombre y comprobar el escaneo antes de publicar. No se repite la URL dentro del HTML.
+- La diapositiva 19 intenta cargar `assets/images/cierre-cabalango.jpg` como fondo. Si el archivo no está disponible, conserva automáticamente el fondo editorial de la presentación.
+
 ## Publicar en GitHub Pages
 
 1. En GitHub, abrir **Settings → Pages**.
