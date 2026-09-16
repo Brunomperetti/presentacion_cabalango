@@ -20,6 +20,9 @@
         link.href = config.app_url_tracked || config.app_url;
         link.addEventListener('click', () => window.CabalangoTracking?.trackAppOpen?.('presentacion'));
       });
+      document.querySelectorAll('[data-admin-link]').forEach((link) => {
+        link.href = config.admin_url;
+      });
     } catch (error) {
       console.error('[Cabalango] Error al configurar enlaces:', error);
     }
@@ -47,6 +50,7 @@
         image.addEventListener('load', () => {
           container.style.backgroundImage = `url('${candidates[index]}')`;
           container.classList.remove('is-missing');
+          container.classList.add('has-image');
           container.closest('.device, .listing, .app-step, .stage-flow li')?.classList.add('has-real-image');
           container.closest('.devices')?.classList.add('has-real-image');
           container.dispatchEvent(new CustomEvent('cabalango:imageavailable', { bubbles: true }));

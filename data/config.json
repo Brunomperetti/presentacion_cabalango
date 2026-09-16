@@ -1,4 +1,5 @@
 {
   "app_url": "https://catalogo.vicapa.com.ar/",
-  "app_url_tracked": "https://catalogo.vicapa.com.ar/?utm_source=presentacion&utm_medium=web&utm_campaign=cabalango_2026_27"
+  "app_url_tracked": "https://catalogo.vicapa.com.ar/?utm_source=presentacion&utm_medium=web&utm_campaign=cabalango_2026_27",
+  "admin_url": "https://catalogo.vicapa.com.ar/admin"
 }
