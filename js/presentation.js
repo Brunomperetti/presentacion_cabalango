@@ -51,6 +51,16 @@
     });
   }
 
+  function configureQrFallback() {
+    document.querySelectorAll('[data-qr-placeholder]').forEach((container) => {
+      const image = container.querySelector('img');
+      if (!image) return;
+      const showPlaceholder = () => container.classList.add('is-placeholder');
+      image.addEventListener('error', showPlaceholder);
+      if (image.complete && !image.naturalWidth) showPlaceholder();
+    });
+  }
+
   // Activate the photographic cover only when the future asset is available.
   const heroImage = new Image();
   heroImage.addEventListener('load', () => document.querySelector('.hero-slide')?.classList.add('has-hero-image'));
@@ -150,6 +160,7 @@
   window.addEventListener('hashchange', () => showSlide(indexFromHash(), { replaceHistory: true }));
 
   configureAppLinks();
+  configureQrFallback();
   loadLocalImages();
   showSlide(indexFromHash(), { replaceHistory: true });
 })();
